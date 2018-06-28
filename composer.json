@@ -1,0 +1,13 @@
+{
+    "name": "demvsystems/smtp-autoconfig",
+    "description": "Discovers autoconfig STMP-Settings",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sascha Scholly",
+            "email": "s.scholly@demv.de"
+        }
+    ],
+    "require": {}
+}
