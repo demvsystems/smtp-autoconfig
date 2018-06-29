@@ -33,7 +33,7 @@ class AutoConfig implements DiscoveryInterface
     public function discoverSmtp(string $mailAddress): OutGoingServerContainer
     {
         $discovery = $this->discovery;
-        while ($discovery->hasNext()) {
+        while ($discovery !== null) {
             $servers = $discovery->discoverSmtp($mailAddress);
             if ($servers->hasAny()) {
                 return $servers;

@@ -24,7 +24,7 @@ abstract class AbstractDiscoveryState implements DiscoveryStateInterface
     /**
      * @return DiscoveryInterface
      */
-    public function getNext(): DiscoveryInterface
+    public function getNext(): ?DiscoveryInterface
     {
         return $this->next;
     }

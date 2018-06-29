@@ -11,7 +11,7 @@ class OutGoingServerContainer
     /**
      * @var OutgoingServer[]
      */
-    private $outgoingServers;
+    private $outgoingServers = [];
 
     /**
      * @return OutGoingServerContainer
@@ -97,5 +97,24 @@ class OutGoingServerContainer
         return array_filter($this->outgoingServers, function (OutgoingServer $server) use ($type) {
             return $server->getSocketType() === $type;
         });
+    }
+
+    /**
+     * @return OutgoingServer|null
+     */
+    public function getBestOutgoingServer(): ?OutgoingServer
+    {
+        $tls = $this->getAllTls();
+        $ssl = $this->getAllSsl();
+
+        if (!empty($tls)) {
+            return array_shift($tls);
+        }
+
+        if (!empty($ssl)) {
+            return array_shift($ssl);
+        }
+
+        return null;
     }
 }

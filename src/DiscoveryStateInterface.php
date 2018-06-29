@@ -17,7 +17,7 @@ interface DiscoveryStateInterface
     /**
      * @return DiscoveryInterface
      */
-    public function getNext(): DiscoveryInterface;
+    public function getNext(): ?DiscoveryInterface;
 
     /**
      * @return bool

@@ -13,10 +13,6 @@ use Demv\Smtp\Discovery\ServerConfig\OutGoingServerContainer;
  */
 class Discovery extends AbstractDiscoveryState implements DiscoveryInterface, DiscoveryStateInterface
 {
-    private const AUTOCONFIG_URLS = [
-        'https://autoconfig.%s/mail/config-v1.1.xml?emailaddress=%s'
-    ];
-
     /**
      * @param string $mailAddress
      *
@@ -24,8 +20,6 @@ class Discovery extends AbstractDiscoveryState implements DiscoveryInterface, Di
      */
     public function discoverSmtp(string $mailAddress): OutGoingServerContainer
     {
-        foreach(self::AUTOCONFIG_URLS as $url){
-
-        }
+        return OutGoingServerContainer::none();
     }
 }

@@ -9,5 +9,16 @@
             "email": "s.scholly@demv.de"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^6",
+        "punarinta/email-auth": "1.*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demv\\Smtp\\Discovery\\": "src/"
+        }
+    }
 }
