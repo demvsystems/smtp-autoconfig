@@ -82,7 +82,7 @@ class OutgoingServer
      */
     public function getUsername(): string
     {
-        return $this->username;
+        return $this->username ?? '';
     }
 
     /**

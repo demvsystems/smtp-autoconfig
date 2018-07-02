@@ -21,6 +21,7 @@ class OutgoingServerCreator
         $outgoingServer->setHostname($element->hostname);
         $outgoingServer->setPort((int) $element->port);
         $outgoingServer->setSocketType($element->socketType);
+        $outgoingServer->setUsername($element->username ?? '');
 
         return $outgoingServer;
     }
