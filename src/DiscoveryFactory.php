@@ -21,7 +21,7 @@ class DiscoveryFactory
         $ispdbLookup = new IspdbLookup();
         $guess       = new Guess();
         $ispLookup->setNextMethod($ispdbLookup);
-        $ispdbLookup->setNextMethod($guess);
+//        $ispdbLookup->setNextMethod($guess);
 
         return new AutoConfig($ispLookup);
     }
