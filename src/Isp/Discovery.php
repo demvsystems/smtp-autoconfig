@@ -49,7 +49,7 @@ class Discovery extends AbstractDiscoveryState implements DiscoveryInterface, Di
      */
     private function tryUrl(string $url): OutGoingServerContainer
     {
-        $client = new GuzzleClient(['verify' => false, 'redirect' => true]);
+        $client = new GuzzleClient(['verify' => false, 'redirect' => true, 'connect_timeout' => 7, 'timeout' => 7]);
 
         try {
             $result = $client->get($url);
